@@ -78,7 +78,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_ListApprovalRequests")
   public func listApprovalRequests(
     request: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse {
+  ) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse {
     try await self.inner.listApprovalRequests(request: request, options: options)
   }
 
@@ -91,7 +91,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
     byItem: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<ApprovalRequest, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+      (token: Swift.String) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
       in
       var request = byItem
       request.pageToken = token
@@ -105,7 +105,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_GetApprovalRequest")
   public func getApprovalRequest(
     request: GetApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     try await self.inner.getApprovalRequest(request: request, options: options)
   }
 
@@ -117,7 +117,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_ApproveApprovalRequest")
   public func approveApprovalRequest(
     request: ApproveApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     try await self.inner.approveApprovalRequest(request: request, options: options)
   }
 
@@ -135,7 +135,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_DismissApprovalRequest")
   public func dismissApprovalRequest(
     request: DismissApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     try await self.inner.dismissApprovalRequest(request: request, options: options)
   }
 
@@ -151,7 +151,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_InvalidateApprovalRequest")
   public func invalidateApprovalRequest(
     request: InvalidateApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     try await self.inner.invalidateApprovalRequest(request: request, options: options)
   }
 
@@ -160,7 +160,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_GetAccessApprovalSettings")
   public func getAccessApprovalSettings(
     request: GetAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     try await self.inner.getAccessApprovalSettings(request: request, options: options)
   }
 
@@ -170,7 +170,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_UpdateAccessApprovalSettings")
   public func updateAccessApprovalSettings(
     request: UpdateAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     try await self.inner.updateAccessApprovalSettings(request: request, options: options)
   }
 
@@ -194,7 +194,7 @@ public class AccessApprovalClient: Clients.AccessApprovalProtocol {
   /// @Snippet(path: "AccessApproval_GetAccessApprovalServiceAccount")
   public func getAccessApprovalServiceAccount(
     request: GetAccessApprovalServiceAccountMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount {
     try await self.inner.getAccessApprovalServiceAccount(request: request, options: options)
   }
 }
@@ -208,7 +208,7 @@ extension Clients {
   public protocol AccessApprovalProtocol {
     /// See `AccessApprovalClient.listApprovalRequests`.
     func listApprovalRequests(request: ListApprovalRequestsMessage) async throws
-      -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+      -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
 
     /// See `AccessApprovalClient.listApprovalRequests`.
     func listApprovalRequests(
@@ -222,43 +222,43 @@ extension Clients {
 
     /// See `AccessApprovalClient.getApprovalRequest`.
     func getApprovalRequest(request: GetApprovalRequestMessage) async throws
-      -> GoogleCloudAccessapprovalV1.ApprovalRequest
+      -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.getApprovalRequest`.
     func getApprovalRequest(
       name: Swift.String,
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.approveApprovalRequest`.
     func approveApprovalRequest(request: ApproveApprovalRequestMessage) async throws
-      -> GoogleCloudAccessapprovalV1.ApprovalRequest
+      -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.dismissApprovalRequest`.
     func dismissApprovalRequest(request: DismissApprovalRequestMessage) async throws
-      -> GoogleCloudAccessapprovalV1.ApprovalRequest
+      -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.invalidateApprovalRequest`.
     func invalidateApprovalRequest(request: InvalidateApprovalRequestMessage) async throws
-      -> GoogleCloudAccessapprovalV1.ApprovalRequest
+      -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.getAccessApprovalSettings`.
     func getAccessApprovalSettings(request: GetAccessApprovalSettingsMessage) async throws
-      -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+      -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.getAccessApprovalSettings`.
     func getAccessApprovalSettings(
       name: Swift.String,
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.updateAccessApprovalSettings`.
     func updateAccessApprovalSettings(request: UpdateAccessApprovalSettingsMessage) async throws
-      -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+      -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.updateAccessApprovalSettings`.
     func updateAccessApprovalSettings(
       settings: AccessApprovalSettings?,
       updateMask: GoogleCloudWkt.FieldMask?,
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.deleteAccessApprovalSettings`.
     func deleteAccessApprovalSettings(request: DeleteAccessApprovalSettingsMessage) async throws
@@ -270,17 +270,17 @@ extension Clients {
 
     /// See `AccessApprovalClient.getAccessApprovalServiceAccount`.
     func getAccessApprovalServiceAccount(request: GetAccessApprovalServiceAccountMessage)
-      async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount
+      async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount
 
     /// See `AccessApprovalClient.getAccessApprovalServiceAccount`.
     func getAccessApprovalServiceAccount(
       name: Swift.String,
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount
 
     /// See `AccessApprovalClient.listApprovalRequests`.
     func listApprovalRequests(
       request: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+    ) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
 
     /// See `AccessApprovalClient.listApprovalRequests`.
     func listApprovalRequests(
@@ -290,32 +290,32 @@ extension Clients {
     /// See `AccessApprovalClient.getApprovalRequest`.
     func getApprovalRequest(
       request: GetApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.approveApprovalRequest`.
     func approveApprovalRequest(
       request: ApproveApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.dismissApprovalRequest`.
     func dismissApprovalRequest(
       request: DismissApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.invalidateApprovalRequest`.
     func invalidateApprovalRequest(
       request: InvalidateApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     /// See `AccessApprovalClient.getAccessApprovalSettings`.
     func getAccessApprovalSettings(
       request: GetAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.updateAccessApprovalSettings`.
     func updateAccessApprovalSettings(
       request: UpdateAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     /// See `AccessApprovalClient.deleteAccessApprovalSettings`.
     func deleteAccessApprovalSettings(
@@ -325,21 +325,21 @@ extension Clients {
     /// See `AccessApprovalClient.getAccessApprovalServiceAccount`.
     func getAccessApprovalServiceAccount(
       request: GetAccessApprovalServiceAccountMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount
   }
 }
 
 // Default implementations
 extension Clients.AccessApprovalProtocol {
   public func listApprovalRequests(request: ListApprovalRequestsMessage) async throws
-    -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+    -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
   {
     try await self.listApprovalRequests(request: request, options: .init())
   }
 
   public func listApprovalRequests(
     request: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse {
+  ) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -353,7 +353,7 @@ extension Clients.AccessApprovalProtocol {
     byItem: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<ApprovalRequest, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+      (token: Swift.String) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
       in
       throw GoogleCloudGax.RequestError.unimplemented
     }
@@ -370,20 +370,20 @@ extension Clients.AccessApprovalProtocol {
   }
 
   public func getApprovalRequest(request: GetApprovalRequestMessage) async throws
-    -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    -> GoogleCloudAccessApprovalV1.ApprovalRequest
   {
     try await self.getApprovalRequest(request: request, options: .init())
   }
 
   public func getApprovalRequest(
     request: GetApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getApprovalRequest(
     name: Swift.String,
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     let request = GetApprovalRequestMessage().with {
       $0.name = name
     }
@@ -391,56 +391,56 @@ extension Clients.AccessApprovalProtocol {
   }
 
   public func approveApprovalRequest(request: ApproveApprovalRequestMessage) async throws
-    -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    -> GoogleCloudAccessApprovalV1.ApprovalRequest
   {
     try await self.approveApprovalRequest(request: request, options: .init())
   }
 
   public func approveApprovalRequest(
     request: ApproveApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func dismissApprovalRequest(request: DismissApprovalRequestMessage) async throws
-    -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    -> GoogleCloudAccessApprovalV1.ApprovalRequest
   {
     try await self.dismissApprovalRequest(request: request, options: .init())
   }
 
   public func dismissApprovalRequest(
     request: DismissApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func invalidateApprovalRequest(request: InvalidateApprovalRequestMessage) async throws
-    -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    -> GoogleCloudAccessApprovalV1.ApprovalRequest
   {
     try await self.invalidateApprovalRequest(request: request, options: .init())
   }
 
   public func invalidateApprovalRequest(
     request: InvalidateApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+  ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getAccessApprovalSettings(request: GetAccessApprovalSettingsMessage) async throws
-    -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
   {
     try await self.getAccessApprovalSettings(request: request, options: .init())
   }
 
   public func getAccessApprovalSettings(
     request: GetAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getAccessApprovalSettings(
     name: Swift.String,
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     let request = GetAccessApprovalSettingsMessage().with {
       $0.name = name
     }
@@ -448,21 +448,21 @@ extension Clients.AccessApprovalProtocol {
   }
 
   public func updateAccessApprovalSettings(request: UpdateAccessApprovalSettingsMessage)
-    async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
   {
     try await self.updateAccessApprovalSettings(request: request, options: .init())
   }
 
   public func updateAccessApprovalSettings(
     request: UpdateAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func updateAccessApprovalSettings(
     settings: AccessApprovalSettings?,
     updateMask: GoogleCloudWkt.FieldMask?,
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
     let request = UpdateAccessApprovalSettingsMessage().with {
       $0.settings = settings
       $0.updateMask = updateMask
@@ -492,20 +492,20 @@ extension Clients.AccessApprovalProtocol {
   }
 
   public func getAccessApprovalServiceAccount(request: GetAccessApprovalServiceAccountMessage)
-    async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount
+    async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount
   {
     try await self.getAccessApprovalServiceAccount(request: request, options: .init())
   }
 
   public func getAccessApprovalServiceAccount(
     request: GetAccessApprovalServiceAccountMessage, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getAccessApprovalServiceAccount(
     name: Swift.String,
-  ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount {
+  ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount {
     let request = GetAccessApprovalServiceAccountMessage().with {
       $0.name = name
     }

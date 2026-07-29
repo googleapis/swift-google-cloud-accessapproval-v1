@@ -25,31 +25,31 @@ extension Clients {
   protocol AccessApprovalStub {
     func listApprovalRequests(
       request: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse
+    ) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse
 
     func getApprovalRequest(
       request: GetApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     func approveApprovalRequest(
       request: ApproveApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     func dismissApprovalRequest(
       request: DismissApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     func invalidateApprovalRequest(
       request: InvalidateApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest
 
     func getAccessApprovalSettings(
       request: GetAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     func updateAccessApprovalSettings(
       request: UpdateAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings
 
     func deleteAccessApprovalSettings(
       request: DeleteAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
@@ -57,7 +57,7 @@ extension Clients {
 
     func getAccessApprovalServiceAccount(
       request: GetAccessApprovalServiceAccountMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount
   }
 
   class AccessApprovalTransport: AccessApprovalStub {
@@ -70,7 +70,7 @@ extension Clients {
 
     public func listApprovalRequests(
       request: ListApprovalRequestsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse {
+    ) async throws -> GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -89,12 +89,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.ListApprovalRequestsResponse.self, from: data)
+        GoogleCloudAccessApprovalV1.ListApprovalRequestsResponse.self, from: data)
     }
 
     public func getApprovalRequest(
       request: GetApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -109,12 +109,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.ApprovalRequest.self, from: data)
+        GoogleCloudAccessApprovalV1.ApprovalRequest.self, from: data)
     }
 
     public func approveApprovalRequest(
       request: ApproveApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -131,12 +131,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.ApprovalRequest.self, from: data)
+        GoogleCloudAccessApprovalV1.ApprovalRequest.self, from: data)
     }
 
     public func dismissApprovalRequest(
       request: DismissApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -153,12 +153,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.ApprovalRequest.self, from: data)
+        GoogleCloudAccessApprovalV1.ApprovalRequest.self, from: data)
     }
 
     public func invalidateApprovalRequest(
       request: InvalidateApprovalRequestMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.ApprovalRequest {
+    ) async throws -> GoogleCloudAccessApprovalV1.ApprovalRequest {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -175,12 +175,12 @@ extension Clients {
       req.httpBody = try JSONEncoder().encode(request)
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.ApprovalRequest.self, from: data)
+        GoogleCloudAccessApprovalV1.ApprovalRequest.self, from: data)
     }
 
     public func getAccessApprovalSettings(
       request: GetAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -195,12 +195,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.AccessApprovalSettings.self, from: data)
+        GoogleCloudAccessApprovalV1.AccessApprovalSettings.self, from: data)
     }
 
     public func updateAccessApprovalSettings(
       request: UpdateAccessApprovalSettingsMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalSettings {
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalSettings {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.settings.map({ $0.name }), !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding(
@@ -222,7 +222,7 @@ extension Clients {
       }
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.AccessApprovalSettings.self, from: data)
+        GoogleCloudAccessApprovalV1.AccessApprovalSettings.self, from: data)
     }
 
     public func deleteAccessApprovalSettings(
@@ -245,7 +245,7 @@ extension Clients {
 
     public func getAccessApprovalServiceAccount(
       request: GetAccessApprovalServiceAccountMessage, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount {
+    ) async throws -> GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -260,7 +260,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudAccessapprovalV1.AccessApprovalServiceAccount.self, from: data)
+        GoogleCloudAccessApprovalV1.AccessApprovalServiceAccount.self, from: data)
     }
   }
 }
